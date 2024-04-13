@@ -148,41 +148,4 @@ public class HexagonalMap : MonoBehaviour
         mover.MoveToWorldPosition(pos);
         return this;
     }
-
-    public Vector2Int GetNextCell(Transform mover, HexagonalDirection currentDirection)
-    {
-        Vector2Int currentCell = GetCurrentCell(mover.position);
-        var isRawOdd = currentCell.y % 2 == 0;
-        Vector2Int directionVector = Vector2Int.zero;
-        switch (currentDirection)
-        {
-            case HexagonalDirection.up:
-                directionVector = new Vector2Int(1, 0);
-                break;
-            case HexagonalDirection.down:
-                directionVector = new Vector2Int(-1, 0);
-                break;
-            case HexagonalDirection.upright:
-                directionVector = new Vector2Int(isRawOdd ? 0 : 1, 1); 
-                break;
-            case HexagonalDirection.downright:
-                directionVector = new Vector2Int(isRawOdd ? -1 : 0, 1);
-                break;
-            case HexagonalDirection.downleft:
-                directionVector = new Vector2Int(isRawOdd ? -1 : 0, -1);
-                break;
-            case HexagonalDirection.upleft:
-                directionVector = new Vector2Int(isRawOdd ? 0 : 1, -1);
-                break;
-        }
-        Debug.Log($"Next Cell is {currentCell + directionVector}");
-        return currentCell + directionVector;
-    }
-
-
-    public Vector2 GetNextCellCoordinates(Transform mover, HexagonalDirection currentDirection)
-    {
-        var cell = GetNextCell(mover, currentDirection);
-        return GetWorldCoordinatesOfCell(cell);
-    }
 }
