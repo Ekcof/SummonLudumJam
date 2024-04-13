@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
 {
     [Inject] private GridObjectPool _pool;
     [Inject] private HexagonalMap _map;
+    [Inject] private UIManager _uiManager;
     [Inject(Id = "mainCamera")] private Camera _camera;
     [SerializeField] private float _doubleClickThreshold;
     private float _lastClickTime = 0f;
@@ -30,25 +31,24 @@ public class InputManager : MonoBehaviour
 
             if (_map.TryGetFreeCell(worldPosition, out var cell))
             {
-                _map.TryToPlaceGridObjectAtCell(() => _pool.Get(typeof(Stone)), cell);
+                _map.TryToPlaceGridObjectAtCell(() => _pool.Get(typeof(Stonen)), cell);
             }
             else
             {
                 var gridObj = _map.GetObjectAtCell(cell);
                 if (gridObj != null)
                 {
-                    if (gridObj is Stone prism)
+                    if (gridObj is Stonen prism)
                     {
 
                     }
                 }
+                if (timeSinceLastClick <= _doubleClickThreshold)
+                {
+                    gridObj.OnDoubleClick();
+                    EventsBus.Publish(new OnDoubleClick() { Position = cell });
+                }
             }
-
-            if (timeSinceLastClick <= _doubleClickThreshold)
-            {
-                EventsBus.Publish(new OnDoubleClick() { Position = cell });
-            }
-
             _lastClickTime = Time.time;
         }
 #endif

@@ -4,8 +4,8 @@ public enum StoneType {
     Water,
     Air,
     Fire,
-    Wood,
     Bone,
+    Tree,
     Berry
 }
 

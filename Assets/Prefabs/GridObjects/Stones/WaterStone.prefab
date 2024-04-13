@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3979743801400914511}
-  - component: {fileID: 8995400571566783919}
   m_Layer: 0
   m_Name: WaterStone
   m_TagString: Untagged
@@ -33,21 +32,6 @@ Transform:
   - {fileID: 8410941464320334223}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8995400571566783919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5282112724912666692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98b4dd273224a514a9b0bbe0e4c2da08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 4251966638944567585}
-  _sprite: {fileID: -89276096, guid: b14be6e5c22bbf045a9fa7a76cdd6869, type: 3}
-  _type: 2
 --- !u!1 &6940200445097451463
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,8 +109,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -89276096, guid: b14be6e5c22bbf045a9fa7a76cdd6869, type: 3}
-  m_Color: {r: 0.2627451, g: 0.29208985, b: 0.37254903, a: 1}
+  m_Sprite: {fileID: 1687184741, guid: 6fc76c607b5bb1943ad54e074a863646, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

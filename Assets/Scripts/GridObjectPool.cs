@@ -8,18 +8,19 @@ public class GridObjectPool : MonoBehaviour
 {
     [Inject] private DiContainer _diContainer;
     [Inject] private GridPrefabContainer _prefabContainer;
-    private readonly Dictionary<GridObject, Type> _activeObjects = new();
-    private readonly Dictionary<GridObject, Type> _hiddenObjects = new();
 
-    public void Pool(GridObject arg)
+    private readonly Dictionary<Stone, StoneType> _activeObjects = new();
+    private readonly Dictionary<Stone, StoneType> _hiddenObjects = new();
+
+    public void Pool(Stone arg)
     {
         _activeObjects.Remove(arg);
         if (_hiddenObjects.ContainsKey(arg))
             return;
-        _hiddenObjects.Add(arg, arg.GetType());
+        _hiddenObjects.Add(arg, arg.StoneType);
     }
 
-    public GridObject Get(Type type)
+    public Stone Get(StoneType type)
     {
         if (!_hiddenObjects.ContainsValue(type))
         {
@@ -36,15 +37,32 @@ public class GridObjectPool : MonoBehaviour
         }
     }
 
-    private GridObject InstantiatePrefab(Type prefabType)
+    public Stone GetByStoneType(StoneType type)
     {
-        var prefab = _prefabContainer.GetPrefabByType(prefabType);
+        if (!_hiddenObjects.ContainsValue(type))
+        {
+            var obj = InstantiatePrefab(type);
+            _activeObjects.Add(obj, type);
+            return obj;
+        }
+        else
+        {
+            var obj = _hiddenObjects.FirstOrDefault(x => x.Value == type).Key;
+            _activeObjects.Add(obj, type);
+            _hiddenObjects.Remove(obj);
+            return obj;
+        }
+    }
+
+    private Stone InstantiatePrefab(StoneType prefabType)
+    {
+        var prefab = _prefabContainer.GetPrefabByStoneType(prefabType);
         if (prefab == null)
         {
             return null;
         }
         return _diContainer != null ?
-           _diContainer.InstantiatePrefabForComponent<GridObject>(prefab, transform) :
+           _diContainer.InstantiatePrefabForComponent<Stone>(prefab, transform) :
            Instantiate(prefab, transform);
     }
 }

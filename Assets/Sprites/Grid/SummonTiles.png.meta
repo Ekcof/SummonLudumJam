@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c74337ae825e164c956a63091faa6d2
+guid: 6fc76c607b5bb1943ad54e074a863646
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,165 +119,173 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FloorTiles_0
+      name: SummonTiles_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 392
-        width: 97
-        height: 81
+        x: 67
+        y: 191
+        width: 157
+        height: 133
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cea25e22ef276043900d01de0bbf2af
-      internalID: 29456138
+      spriteID: d45cb62c0d6595d4691e1a644283c6bd
+      internalID: 963083123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FloorTiles_1
+      name: SummonTiles_1
       rect:
         serializedVersion: 2
-        x: 143
-        y: 390
-        width: 104
-        height: 88
+        x: 231
+        y: 191
+        width: 155
+        height: 133
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e233d74c5f9f114eb68fcd2cdec06ba
-      internalID: -519459380
+      spriteID: f626ec51be8da3041876c5f07a890956
+      internalID: 448454066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FloorTiles_2
+      name: SummonTiles_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 302
-        width: 101
-        height: 83
+        x: 394
+        y: 191
+        width: 155
+        height: 133
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a68b49543c4e3d4faf132b5a271c1cc
-      internalID: 1952426034
+      spriteID: 23ca0296ae2b7c64880a550c72efbbf5
+      internalID: -1281014161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FloorTiles_3
+      name: SummonTiles_3
       rect:
         serializedVersion: 2
-        x: 148
-        y: 303
-        width: 97
-        height: 79
+        x: 556
+        y: 191
+        width: 155
+        height: 133
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af73d318460af4648af3e9dcc21dc993
-      internalID: 414526930
+      spriteID: c22b14e7331bf5e47a552157a76f9e44
+      internalID: -414465298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FloorTiles_4
+      name: SummonTiles_4
       rect:
         serializedVersion: 2
-        x: 30
-        y: 207
-        width: 105
-        height: 90
+        x: 67
+        y: 46
+        width: 157
+        height: 135
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a27027dee720bc4b89f30e0bb937a06
-      internalID: -2082978243
+      spriteID: 5eb3fcc35b0c5ef42932febb35cb8d4a
+      internalID: -653061555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FloorTiles_5
+      name: SummonTiles_5
       rect:
         serializedVersion: 2
-        x: 144
-        y: 211
-        width: 104
-        height: 87
+        x: 231
+        y: 46
+        width: 155
+        height: 135
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cb65b05c17e2694d9597beec5747897
-      internalID: 1326836439
+      spriteID: 718ec463fb8303c409fe7ca783887e42
+      internalID: 1640186556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FloorTiles_6
+      name: SummonTiles_6
       rect:
         serializedVersion: 2
-        x: 144
-        y: 123
-        width: 103
-        height: 85
+        x: 394
+        y: 46
+        width: 155
+        height: 135
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64020f408f5d15048971dbb55d9666dc
-      internalID: -51137541
+      spriteID: e63c68b64a2cd824c8a58c78b2a2b978
+      internalID: 1687184741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SummonTiles_7
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 46
+        width: 155
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fa8be16d9012e499f300154f17837d
+      internalID: 2103391712
       vertices: []
       indices: 
       edges: []
@@ -293,13 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FloorTiles_0: 29456138
-      FloorTiles_1: -519459380
-      FloorTiles_2: 1952426034
-      FloorTiles_3: 414526930
-      FloorTiles_4: -2082978243
-      FloorTiles_5: 1326836439
-      FloorTiles_6: -51137541
+      SummonTiles_0: 963083123
+      SummonTiles_1: 448454066
+      SummonTiles_2: -1281014161
+      SummonTiles_3: -414465298
+      SummonTiles_4: -653061555
+      SummonTiles_5: 1640186556
+      SummonTiles_6: 1687184741
+      SummonTiles_7: 2103391712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

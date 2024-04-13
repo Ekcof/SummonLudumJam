@@ -6,20 +6,20 @@ using UnityEngine;
 [Serializable]
 public class GridPrefabContainer : ScriptableObject
 {
-    [SerializeField] private GridObject[] _prefabs;
+    [SerializeField] private Stone[] _prefabs;
 
-    public GridObject GetPrefabByType(Type type)
+    public Stone GetPrefabByType(Type type)
     {
         return _prefabs.FirstOrDefault(x => x.GetType() == type);
     }
 
-    public GridObject GetPrefabById(string id)
+    public Stone GetPrefabById(string id)
     {
         return _prefabs.FirstOrDefault(x => x.Id == id);
     }
 
-    public GridObject GetPrefabByStoneType(StoneType id)
+    public Stone GetPrefabByStoneType(StoneType id)
     {
-        return _prefabs.FirstOrDefault(x => x is Stone stone && stone.StoneType == id);
+        return _prefabs.FirstOrDefault(x => x is Stonen stone && stone.StoneType == id);
     }
 }

@@ -10,7 +10,7 @@ public class HexagonalMap : MonoBehaviour
     [SerializeField] private Tilemap _floorTilemap;
     [SerializeField] private Tilemap _obstacleTilemap;
     [SerializeField][Range(0f, 1f)] private float _maxDistanceRelation = 0.4f;
-    private readonly Dictionary<Vector2Int, GridObject> _gridObjects = new();
+    private readonly Dictionary<Vector2Int, Stone> _gridObjects = new();
     private List<Vector2Int> _freeTiles;
     private List<Vector2Int> _obstacleTiles;
     public Vector2 CellSize => _grid.cellSize;
@@ -87,7 +87,7 @@ public class HexagonalMap : MonoBehaviour
         return false;
     }
 
-    public GridObject GetObjectAtCell(Vector2Int cell)
+    public Stone GetObjectAtCell(Vector2Int cell)
     {
         if (_gridObjects.ContainsKey(cell))
         {
@@ -112,7 +112,7 @@ public class HexagonalMap : MonoBehaviour
         return _freeTiles.Contains(cell) && GetObjectAtCell(cell) == null;
     }
 
-    public bool TryToPlaceGridObjectAtCell(Func<GridObject> OnSpawn, Vector2Int cell)
+    public bool TryToPlaceGridObjectAtCell(Func<Stone> OnSpawn, Vector2Int cell)
     {
         if (IsCellFree(cell))
         {
@@ -142,7 +142,7 @@ public class HexagonalMap : MonoBehaviour
         return false;
     }
 
-    public HexagonalMap MoveTransformToCell(GridObject mover, Vector3Int cellPosition)
+    public HexagonalMap MoveTransformToCell(Stone mover, Vector3Int cellPosition)
     {
         var pos = _grid.GetCellCenterWorld(cellPosition);
         mover.MoveToWorldPosition(pos);
