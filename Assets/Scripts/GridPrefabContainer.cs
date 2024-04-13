@@ -20,6 +20,6 @@ public class GridPrefabContainer : ScriptableObject
 
     public Stone GetPrefabByStoneType(StoneType id)
     {
-        return _prefabs.FirstOrDefault(x => x is Stonen stone && stone.StoneType == id);
+        return _prefabs.FirstOrDefault(x => x.StoneType == id);
     }
 }

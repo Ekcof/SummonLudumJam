@@ -31,19 +31,12 @@ public class InputManager : MonoBehaviour
 
             if (_map.TryGetFreeCell(worldPosition, out var cell))
             {
-                _map.TryToPlaceGridObjectAtCell(() => _pool.Get(typeof(Stonen)), cell);
+                _map.TryToPlaceGridObjectAtCell(() => _pool.Get(StoneType.Air), cell);
             }
             else
             {
                 var gridObj = _map.GetObjectAtCell(cell);
-                if (gridObj != null)
-                {
-                    if (gridObj is Stonen prism)
-                    {
-
-                    }
-                }
-                if (timeSinceLastClick <= _doubleClickThreshold)
+                if (gridObj != null && timeSinceLastClick <= _doubleClickThreshold)
                 {
                     gridObj.OnDoubleClick();
                     EventsBus.Publish(new OnDoubleClick() { Position = cell });

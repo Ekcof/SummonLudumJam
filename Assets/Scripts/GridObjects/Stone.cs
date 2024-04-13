@@ -1,8 +1,10 @@
 using DG.Tweening;
 using UnityEngine;
+using Zenject;
 
-public class Stone: MonoBehaviour
+public class Stone : MonoBehaviour
 {
+    [Inject] GridObjectPool _pool;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Sprite _sprite;
     [SerializeField] private StoneType _type;
@@ -14,7 +16,7 @@ public class Stone: MonoBehaviour
     public void OnDoubleClick()
     {
         DOTween.Kill(transform);
-        transform.DOPunchScale(Vector3.one * 1.2f, 0.3f).SetLoops(2).OnComplete(() => Destroy(gameObject));
+        transform.DOPunchScale(Vector3.one * 1.2f, 0.3f).SetLoops(2).OnComplete(() => _pool.Pool(this));
     }
 
     private void OnDestroy()
