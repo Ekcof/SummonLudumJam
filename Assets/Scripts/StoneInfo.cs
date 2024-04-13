@@ -1,11 +1,11 @@
 public enum StoneType {
     None,
     Soil,
+    Tree,
     Water,
     Air,
     Fire,
     Bone,
-    Tree,
     Berry
 }
 
