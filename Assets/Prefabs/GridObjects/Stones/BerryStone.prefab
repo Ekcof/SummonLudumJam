@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3979743801400914511}
   m_Layer: 0
-  m_Name: SoilStone
+  m_Name: BerryStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2103391712, guid: 6fc76c607b5bb1943ad54e074a863646, type: 3}
+  m_Sprite: {fileID: -653061555, guid: 6fc76c607b5bb1943ad54e074a863646, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
