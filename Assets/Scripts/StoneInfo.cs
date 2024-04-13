@@ -3,7 +3,10 @@ public enum StoneType {
     Soil,
     Water,
     Air,
-    Fire
+    Fire,
+    Wood,
+    Bone,
+    Berry
 }
 
 public class StoneInfo{
