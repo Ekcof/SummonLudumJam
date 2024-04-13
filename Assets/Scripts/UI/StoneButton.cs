@@ -13,7 +13,12 @@ public class StoneButton : MonoBehaviour{
         _button.onClick.AddListener(() => action(_type));
     }
 
+    public void HideButton() {
+        gameObject.SetActive(false);
+    }
+
     private void OnDestroy() {
         _button.onClick.RemoveAllListeners();
     }
+
 }
