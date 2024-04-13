@@ -5,3 +5,8 @@ using UnityEngine;
 public class OnDemandToSpawnLightBall
 {
 }
+
+public class OnDoubleClick
+{
+    public Vector2Int Position;
+}

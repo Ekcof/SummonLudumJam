@@ -48,9 +48,9 @@ public class LightBall : MonoBehaviour
     private void CheckObstacle(Vector2Int cell)
     {
         var gridObject = _hexMap.GetObjectAtCell(cell);
-        if (gridObject != null && gridObject is Prism prism)
+        if (gridObject != null && gridObject is Stone prism)
         {
-            _direction = prism.Direction;
+            //_direction = prism.Direction;
             MoveToNextCell();
         }
         else

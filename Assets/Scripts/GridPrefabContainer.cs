@@ -17,4 +17,9 @@ public class GridPrefabContainer : ScriptableObject
     {
         return _prefabs.FirstOrDefault(x => x.Id == id);
     }
+
+    public GridObject GetPrefabByStoneType(StoneType id)
+    {
+        return _prefabs.FirstOrDefault(x => x is Stone stone && stone.StoneType == id);
+    }
 }
