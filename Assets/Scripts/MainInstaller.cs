@@ -6,6 +6,7 @@ public class MainInstaller : MonoInstaller
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private HexagonalMap _hexMap;
     [SerializeField] private GridObjectPool _gridObjectPool;
+    [SerializeField] private UIManager _uiManager;
 
     [Header("Scriptable objects")]
     [SerializeField] private GridPrefabContainer _gridPrefabContainer;
@@ -16,6 +17,7 @@ public class MainInstaller : MonoInstaller
         Bind(_hexMap);
         Bind(_gridObjectPool);
         Bind(_gridPrefabContainer);
+        Bind(_uiManager);
     }
 
     private protected void Bind<T>(T instance)
