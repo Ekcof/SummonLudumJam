@@ -14,7 +14,14 @@ public class ResultHandler : ScriptableObject
     {
         foreach (var resultObject in Combinations)
         {
-            if (resultObject.Combination.SequenceEqual(combination))
+            List<int> checkingComb = new List<int>(resultObject.Combination);
+            checkingComb.Sort();
+
+            string combinationString = string.Join(",", checkingComb);
+
+            Debug.Log($" The combination is {combinationString}");
+
+            if (checkingComb.SequenceEqual(combination))
             {
                 return resultObject;
             }

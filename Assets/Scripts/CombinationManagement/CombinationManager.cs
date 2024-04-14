@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 
 public class CombinationManager : MonoBehaviour
 {
     [Inject] HexagonalMap _map;
-    private StoneInfo _currentStone;
+    [Inject] ResultHandler _results;
+    [Inject] SpriteHolder _sprites;
+    [Inject] AnimalView _animal;
 
     private void Awake()
     {
@@ -15,6 +18,10 @@ public class CombinationManager : MonoBehaviour
     private void OnStartSummon(OnStartSummon data)
     {
         var combination = CalculateCombination();
+
+        var result = _results.FindMatchingCombination(combination);
+        var sprites = _sprites.GetSpriteWrapperById(result.Id);
+        _animal.SetView(sprites);
     }
 
     private List<int> CalculateCombination()

@@ -8,9 +8,11 @@ using UnityEditor.AssetImporters;
 public class GoogleSheetImporter : ScriptableObject
 {
     public ResultHandler _resultHandler; // ссылка на ScriptableObject дл€ хранени€ данных
+    // —сылка на таблицу по комбинаци€м
     private const string googleSheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQVvz0THR9VaHFaWAJkN_3MZXEfemv6Z_VgJbnb59PDpTo3Yd5rgCOj-IWNPH6u-SR27RfJnQ5TUNka/pub?gid=0&single=true&output=csv";
 
-    public void ImportData()
+
+    public void ImportResultsData()
     {
         if (_resultHandler != null)
         {
@@ -32,7 +34,7 @@ public class GoogleSheetImporterEditor : Editor
 
         if (GUILayout.Button("Import ResultsData from Google Sheet"))
         {
-            importer.ImportData();
+            importer.ImportResultsData();
         }
     }
 }

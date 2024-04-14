@@ -8,9 +8,9 @@ public class SpriteHolder : ScriptableObject
 {
     [SerializeField] private SpriteWrapper[] _sprites;
 
-    public Sprite GetSpriteById(string id)
+    public SpriteWrapper GetSpriteWrapperById(string id)
     {
-        return _sprites.FirstOrDefault(x => x.SpriteId == id).Sprite;
+        return _sprites.FirstOrDefault(x => x.SpriteId == id);
     }
 }
 
@@ -18,5 +18,6 @@ public class SpriteHolder : ScriptableObject
 public class SpriteWrapper
 {
     public string SpriteId;
-    public Sprite Sprite;
+    public Sprite SpriteHead;
+    public Sprite SpriteBody;
 }
