@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
 
@@ -12,7 +13,7 @@ public class SummonButton : MonoBehaviour
     [SerializeField] private Image _image;
     [SerializeField] private Color _enabledColor = Color.white;
     [SerializeField] private Color _disabledColor = Color.gray;
-
+    [SerializeField] private Sprite _tryAgain;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +31,17 @@ public class SummonButton : MonoBehaviour
         _soundManager.PlaySound(0);
         EventsBus.Publish(new OnStartSummon());
         OnChangeStoneCount(default);
+        ChangeButton();
+    }
+
+    private void ChangeButton() {
+        _button.onClick.RemoveAllListeners();
+        _button.onClick.AddListener(OnNextScene);
+        _image.sprite = _tryAgain;
+    }
+
+    private void OnNextScene() {
+        SceneManager.LoadScene(0);
     }
 
     private void OnChangeStoneCount(object data)

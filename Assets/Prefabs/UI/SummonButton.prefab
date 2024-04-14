@@ -137,3 +137,4 @@ MonoBehaviour:
   _image: {fileID: 3498069370187216084}
   _enabledColor: {r: 1, g: 1, b: 1, a: 1}
   _disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  _tryAgain: {fileID: 21300000, guid: 25c8677a46b868d46b23f9e69b2bb56e, type: 3}
