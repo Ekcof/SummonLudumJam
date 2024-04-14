@@ -7,6 +7,7 @@ using Zenject;
 public class SummonButton : MonoBehaviour
 {
     [Inject] HexagonalMap _map;
+    [Inject] SoundManager _soundManager;
     [SerializeField] private Button _button;
     [SerializeField] private Image _image;
     [SerializeField] private Color _enabledColor = Color.white;
@@ -26,6 +27,7 @@ public class SummonButton : MonoBehaviour
     }
     private void StartSummon()
     {
+        _soundManager.PlaySound(0);
         EventsBus.Publish(new OnStartSummon());
         OnChangeStoneCount(default);
     }

@@ -316,6 +316,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doubleClickThreshold: 0.2
+--- !u!114 &751143430 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082172869085357959, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+  m_PrefabInstance: {fileID: 5205372109619206425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b571aa6e11ce14991b9ddf83bb762b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &849939350
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +674,7 @@ MonoBehaviour:
   _combinationManager: {fileID: 849939351}
   _soundManager: {fileID: 936515162}
   _animalView: {fileID: 1307226421}
+  _bar: {fileID: 751143430}
   _gridPrefabContainer: {fileID: 11400000, guid: 450bf9ba74363ab4a81fad6a82919b17, type: 2}
   _resultHandler: {fileID: 11400000, guid: 5a78c1e5654ceae479c4064bd441875b, type: 2}
   _spriteHolder: {fileID: 11400000, guid: 4274939daf85c0845bca968488ce139d, type: 2}
@@ -733,6 +745,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3135246457944032086, guid: 10f414b6511ff1540b67a60d08713ccc, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3393348237518306083, guid: 10f414b6511ff1540b67a60d08713ccc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 764.29236
@@ -1437,6 +1453,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 94889489072850099, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 609560836445712903, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

@@ -11,6 +11,8 @@ public class MainInstaller : MonoInstaller
     [SerializeField] private SoundManager _soundManager;
     [SerializeField] private AnimalView _animalView;
 
+    [SerializeField] private Bar _bar;
+
     [Header("Scriptable objects")]
     [SerializeField] private GridPrefabContainer _gridPrefabContainer;
     [SerializeField] private ResultHandler _resultHandler;
@@ -25,6 +27,8 @@ public class MainInstaller : MonoInstaller
         Bind(_combinationManager);
         Bind(_soundManager);
         Bind(_animalView);
+
+        Bind(_bar);
 
         Bind(_gridPrefabContainer);
         Bind(_resultHandler);

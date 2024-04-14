@@ -8,6 +8,7 @@ public class GridObjectPool : MonoBehaviour
 {
     [Inject] private DiContainer _diContainer;
     [Inject] private GridPrefabContainer _prefabContainer;
+    [Inject] private Bar bar;
 
     private readonly Dictionary<Stone, StoneType> _activeObjects = new();
     private readonly Dictionary<Stone, StoneType> _hiddenObjects = new();
@@ -15,6 +16,8 @@ public class GridObjectPool : MonoBehaviour
     public void Pool(Stone arg)
     {
         _activeObjects.Remove(arg);
+        bar.UpdateBar(_activeObjects.Count);
+
         if (_hiddenObjects.ContainsKey(arg))
             return;
         _hiddenObjects.Add(arg, arg.StoneType);
@@ -22,19 +25,27 @@ public class GridObjectPool : MonoBehaviour
 
     public Stone Get(StoneType type)
     {
+
+        
+
         if (!_hiddenObjects.ContainsValue(type))
         {
             var obj = InstantiatePrefab(type);
             _activeObjects.Add(obj, type);
+            bar.UpdateBar(_activeObjects.Count);
+
             return obj;
         }
         else
         {
             var obj = _hiddenObjects.FirstOrDefault(x => x.Value == type).Key;                    
             _activeObjects.Add(obj, type);
+            bar.UpdateBar(_activeObjects.Count);
             _hiddenObjects.Remove(obj);
             return obj;
         }
+
+
     }
 
     public Stone GetByStoneType(StoneType type)

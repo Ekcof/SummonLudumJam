@@ -3,9 +3,12 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
-public class StoneButton : MonoBehaviour
-{
+public class StoneButton : MonoBehaviour{
+    [Inject]
+    SoundManager _soundManager;
+
     [SerializeField] private Button _button;
 
     [SerializeField] StoneType _type;
@@ -39,6 +42,7 @@ public class StoneButton : MonoBehaviour
     private void OnClick()
     {
         _onClick?.Invoke(_type);
+        //_soundManager.PlaySound(0);
         EventsBus.Publish(new OnSelectButton { StoneType = _type });
 
     }
