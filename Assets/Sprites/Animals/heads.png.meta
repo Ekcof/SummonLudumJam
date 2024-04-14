@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b14be6e5c22bbf045a9fa7a76cdd6869
+guid: 40caa44ef6dd6bf40b31d56271a5a07a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,64 +123,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MedievalTiles_0
+      name: heads_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 338
-        width: 163
-        height: 146
+        x: 93
+        y: 609
+        width: 5
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f97d00a46e19014592707c015b9df71
-      internalID: -89276096
+      spriteID: c13025af37c254f4f88af779327ae87a
+      internalID: 2080059599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MedievalTiles_1
+      name: heads_1
       rect:
         serializedVersion: 2
-        x: 222
-        y: 339
-        width: 161
-        height: 147
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 97
+        y: 327
+        width: 473
+        height: 306
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad4521b730facec45bd9f7bdd330169e
-      internalID: -657399051
+      spriteID: b198f8d75dd084c4e8ea2af83c915b76
+      internalID: 1478525791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MedievalTiles_6
+      name: heads_2
       rect:
         serializedVersion: 2
-        x: 24
-        y: 167
-        width: 165
-        height: 147
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 873
+        y: 288
+        width: 285
+        height: 360
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a21b45688568ff44db48b89034d7d221
-      internalID: 2122008448
+      spriteID: 869d98e77207eb743bcae607bd278cd1
+      internalID: 1861894027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heads_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 593
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351c526512e4dc74bb0b7fa97eeefb8e
+      internalID: 218202758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heads_4
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 54
+        width: 367
+        height: 370
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec9ed0c5fcb32c41abd64eadf8a3d97
+      internalID: -1039720534
       vertices: []
       indices: 
       edges: []
@@ -196,14 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MedievalTiles_0: -89276096
-      MedievalTiles_1: -657399051
-      MedievalTiles_2: -763186287
-      MedievalTiles_3: -81630275
-      MedievalTiles_4: -571942613
-      MedievalTiles_5: -1879507039
-      MedievalTiles_6: 2122008448
-      MedievalTiles_7: 233942840
+      heads_0: 2080059599
+      heads_1: 1478525791
+      heads_2: 1861894027
+      heads_3: 218202758
+      heads_4: -1039720534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

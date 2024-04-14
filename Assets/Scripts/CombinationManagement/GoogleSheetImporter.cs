@@ -30,7 +30,7 @@ public class GoogleSheetImporterEditor : Editor
 
         GoogleSheetImporter importer = (GoogleSheetImporter)target;
 
-        if (GUILayout.Button("Import Data from Google Sheet"))
+        if (GUILayout.Button("Import ResultsData from Google Sheet"))
         {
             importer.ImportData();
         }

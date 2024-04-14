@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6fc76c607b5bb1943ad54e074a863646
+guid: 662a09b10e71610479d4d50251ad63da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SummonTiles_0
+      name: Bodies_0
       rect:
         serializedVersion: 2
-        x: 67
-        y: 191
-        width: 157
-        height: 133
+        x: 657
+        y: 375
+        width: 568
+        height: 293
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d45cb62c0d6595d4691e1a644283c6bd
-      internalID: 963083123
+      spriteID: c76d1eeef5071e440870982fd4c04862
+      internalID: -1019859130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SummonTiles_1
+      name: Bodies_1
       rect:
         serializedVersion: 2
-        x: 231
-        y: 191
-        width: 155
-        height: 133
+        x: 163
+        y: 35
+        width: 385
+        height: 290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f626ec51be8da3041876c5f07a890956
-      internalID: 448454066
+      spriteID: 1152aff553e740842b5d3e5c36ff8c9d
+      internalID: 1343074769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SummonTiles_2
+      name: Bodies_2
       rect:
         serializedVersion: 2
-        x: 394
-        y: 191
-        width: 155
-        height: 133
+        x: 752
+        y: 35
+        width: 421
+        height: 294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,113 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23ca0296ae2b7c64880a550c72efbbf5
-      internalID: -1281014161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SummonTiles_3
-      rect:
-        serializedVersion: 2
-        x: 556
-        y: 191
-        width: 155
-        height: 133
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c22b14e7331bf5e47a552157a76f9e44
-      internalID: -414465298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SummonTiles_4
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 46
-        width: 157
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5eb3fcc35b0c5ef42932febb35cb8d4a
-      internalID: -653061555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SummonTiles_5
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 46
-        width: 155
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 718ec463fb8303c409fe7ca783887e42
-      internalID: 1640186556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SummonTiles_6
-      rect:
-        serializedVersion: 2
-        x: 394
-        y: 46
-        width: 155
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e63c68b64a2cd824c8a58c78b2a2b978
-      internalID: 1687184741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SummonTiles_7
-      rect:
-        serializedVersion: 2
-        x: 556
-        y: 46
-        width: 155
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34fa8be16d9012e499f300154f17837d
-      internalID: 2103391712
+      spriteID: d8d5b46a2312b5b4ba20cdedb9833c77
+      internalID: 1096526591
       vertices: []
       indices: 
       edges: []
@@ -301,14 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SummonTiles_0: 963083123
-      SummonTiles_1: 448454066
-      SummonTiles_2: -1281014161
-      SummonTiles_3: -414465298
-      SummonTiles_4: -653061555
-      SummonTiles_5: 1640186556
-      SummonTiles_6: 1687184741
-      SummonTiles_7: 2103391712
+      Bodies_0: -1019859130
+      Bodies_1: 1343074769
+      Bodies_2: 1096526591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

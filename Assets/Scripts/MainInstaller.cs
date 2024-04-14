@@ -8,6 +8,7 @@ public class MainInstaller : MonoInstaller
     [SerializeField] private GridObjectPool _gridObjectPool;
     [SerializeField] private MainGameManager _mainGameManager;
     [SerializeField] private CombinationManager _combinationManager;
+    [SerializeField] private SoundManager _soundManager;
 
     [Header("Scriptable objects")]
     [SerializeField] private GridPrefabContainer _gridPrefabContainer;
@@ -20,6 +21,7 @@ public class MainInstaller : MonoInstaller
         Bind(_gridObjectPool);
         Bind(_mainGameManager);
         Bind(_combinationManager);
+        Bind(_soundManager);
 
         Bind(_gridPrefabContainer);
         Bind(_resultHandler);
