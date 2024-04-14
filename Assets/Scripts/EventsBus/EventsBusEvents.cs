@@ -1,12 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class OnDemandToSpawnLightBall
 {
 }
 
-public class OnDoubleClick
+public class OnPlaceStone
 {
-    public Vector2Int Position;
+    public StoneType StoneType;
+}
+
+public class OnRemoveStone
+{
+    public StoneType StoneType;
+}
+
+public class OnSelectButton
+{
+    public StoneType StoneType;
+}
+
+public class OnStartSummon
+{
+}
+
+public class OnFinishSummon
+{
 }

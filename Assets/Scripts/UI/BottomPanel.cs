@@ -5,24 +5,36 @@ public class BottomPanel : MonoBehaviour
 {
 
     [Inject]
-    UIManager _uiManager;
+    MainGameManager _uiManager;
 
-    //[SerializeField] private StoneButton _waterButton;
+    [SerializeField] private SummonButton _button;
     [SerializeField] private StoneButton[] _buttons;
 
 
-    void Start()
+    void Awake()
     {
-        //_waterButton.SetAction(SetStone);
         foreach (var button in _buttons) {
             button.SetAction(SetStone);
         }
+        EventsBus.Subscribe<OnStartSummon>(this, OnStartSummon);
+        EventsBus.Subscribe<OnFinishSummon>(this, OnFinishSummon);
+    }
+    
+    private void OnStartSummon(OnStartSummon data)
+    {
+        foreach (var button in _buttons)
+        {
+            button.HideButton();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnFinishSummon(OnFinishSummon data)
     {
-        
+        _uiManager.SetStone(new StoneInfo(StoneType.None));
+        foreach (var button in _buttons)
+        {
+            button.ShowButton();
+        }
     }
 
     private void SetStone(StoneType type) {

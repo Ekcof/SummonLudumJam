@@ -10,9 +10,9 @@ public class InputManager : MonoBehaviour
 {
     [Inject] private GridObjectPool _pool;
     [Inject] private HexagonalMap _map;
-    [Inject] private UIManager _uiManager;
+    [Inject] private MainGameManager _uiManager;
     [Inject(Id = "mainCamera")] private Camera _camera;
-    [SerializeField] private float _doubleClickThreshold;
+    [SerializeField] private float _doubleClickThreshold = 0.2f;
     private float _lastClickTime = 0f;
 
     void Start()
@@ -22,7 +22,6 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
 
@@ -31,19 +30,23 @@ public class InputManager : MonoBehaviour
 
             if (_map.TryGetFreeCell(worldPosition, out var cell))
             {
-                _map.TryToPlaceGridObjectAtCell(() => _pool.Get(StoneType.Air), cell);
+                // Try to place a stone if it's type has been selected
+                if (_uiManager.CurrentStoneType == StoneType.None || 
+                    !_map.TryToPlaceGridObjectAtCell(() => _pool.Get(_uiManager.CurrentStoneType), cell))
+                    EventsBus.Publish(new OnSelectButton { StoneType = StoneType.None });
             }
             else
             {
+                Debug.Log("Cell is occupied");
                 var gridObj = _map.GetObjectAtCell(cell);
                 if (gridObj != null && timeSinceLastClick <= _doubleClickThreshold)
                 {
-                    gridObj.OnDoubleClick();
-                    EventsBus.Publish(new OnDoubleClick() { Position = cell });
+                    Debug.Log("TryToRemoveObjectFromCell");
+                    _map.TryToRemoveObjectFromCell(cell);
                 }
+                EventsBus.Publish(new OnSelectButton { StoneType = StoneType.None });
             }
             _lastClickTime = Time.time;
         }
-#endif
     }
 }

@@ -6,18 +6,10 @@ public class Stone : MonoBehaviour
 {
     [Inject] GridObjectPool _pool;
     [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private Sprite _sprite;
     [SerializeField] private StoneType _type;
     public StoneType StoneType => _type;
     public string Id { get; private set; }
     public bool IsPlaced { get; private set; }
-    public bool IsRemovable { get; private set; } = true;
-
-    public void OnDoubleClick()
-    {
-        DOTween.Kill(transform);
-        transform.DOPunchScale(Vector3.one * 1.2f, 0.3f).SetLoops(2).OnComplete(() => _pool.Pool(this));
-    }
 
     private void OnDestroy()
     {
@@ -27,12 +19,16 @@ public class Stone : MonoBehaviour
     {
         gameObject.SetActive(true);
         IsPlaced = true;
+        EventsBus.Publish(new OnPlaceStone { StoneType = _type });
     }
 
     public void OnRemoved()
     {
+        DOTween.Kill(transform);
+        transform.DOPunchScale(Vector3.one * 1.2f, 0.3f).SetLoops(2).OnComplete(() => _pool.Pool(this));
         gameObject.SetActive(false);
         IsPlaced = false;
+        EventsBus.Publish(new OnRemoveStone { StoneType = _type });
     }
 
     public void MoveToWorldPosition(Vector3 position)

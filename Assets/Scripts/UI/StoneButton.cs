@@ -1,24 +1,82 @@
+using System;
+using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StoneButton : MonoBehaviour{
+public class StoneButton : MonoBehaviour
+{
     [SerializeField] private Button _button;
 
     [SerializeField] StoneType _type;
 
-    //public Button Button => _button;
+    private Action<StoneType> _onClick;
 
-    public void SetAction(UnityEngine.Events.UnityAction<StoneType> action) {
-        _button.onClick.RemoveAllListeners();
-        _button.onClick.AddListener(() => action(_type));
+    private void Awake()
+    {
+        EventsBus.Subscribe<OnSelectButton>(this, OnSelectButton);
+        EventsBus.Subscribe<OnRemoveStone>(this, OnRemoveStone);
+        EventsBus.Subscribe<OnPlaceStone>(this, OnPlaceStone);
     }
 
-    public void HideButton() {
+    public void SetAction(Action<StoneType> action)
+    {
+        _onClick = action;
+        _button.onClick.RemoveAllListeners();
+        _button.onClick.AddListener(OnClick);
+    }
+
+    public void HideButton()
+    {
         gameObject.SetActive(false);
     }
 
-    private void OnDestroy() {
+    public void ShowButton()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void OnClick()
+    {
+        _onClick?.Invoke(_type);
+        EventsBus.Publish(new OnSelectButton { StoneType = _type });
+
+    }
+
+    private void OnPlaceStone(OnPlaceStone data)
+    {
+        if (_type == data.StoneType)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+    private void OnRemoveStone(OnRemoveStone data)
+    {
+        if (_type == data.StoneType)
+        {
+            gameObject.SetActive(true);
+        }
+    }
+
+    private void OnSelectButton(OnSelectButton data)
+    {
+        if (_type == data.StoneType)
+        {
+            DOTween.Kill(transform);
+            transform.DOScale(1.1f, 0.5f).SetLoops(-1, LoopType.Yoyo);
+        }
+        else
+        {
+            DOTween.Kill(transform);
+            transform.localScale = Vector3.one;
+        }
+    }
+
+    private void OnDestroy()
+    {
         _button.onClick.RemoveAllListeners();
+        DOTween.Kill(transform);
     }
 
 }

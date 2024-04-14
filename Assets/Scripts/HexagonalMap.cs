@@ -8,16 +8,15 @@ public class HexagonalMap : MonoBehaviour
 {
     [SerializeField] private Grid _grid;
     [SerializeField] private Tilemap _floorTilemap;
-    [SerializeField] private Tilemap _obstacleTilemap;
     [SerializeField][Range(0f, 1f)] private float _maxDistanceRelation = 0.4f;
     private readonly Dictionary<Vector2Int, Stone> _gridObjects = new();
     private List<Vector2Int> _freeTiles;
     private List<Vector2Int> _obstacleTiles;
     public Vector2 CellSize => _grid.cellSize;
+    public Dictionary<Vector2Int, Stone> GridObjects => _gridObjects;
 
     private void Awake()
     {
-        _obstacleTiles = GetTexturedCells(_obstacleTilemap);
         _freeTiles = GetTexturedCells(_floorTilemap, _obstacleTiles);
 
         Debug.Log($"There are {_freeTiles.Count} tiles");
@@ -73,15 +72,16 @@ public class HexagonalMap : MonoBehaviour
 
         Vector3 cellCenter = _grid.GetCellCenterWorld(tempCellPosition);
 
-        float distanceToCellCenter = Vector3.Distance(worldPosition, cellCenter);
+
 
         Vector3Int nextCellPosition = tempCellPosition + new Vector3Int(1, 0, 0);
         Vector3 nextCellCenter = _grid.GetCellCenterWorld(nextCellPosition);
         float nearestCellDistance = Vector3.Distance(cellCenter, nextCellCenter);
 
-        if (distanceToCellCenter <= nearestCellDistance * _maxDistanceRelation && IsCellFree((Vector2Int)tempCellPosition))
+        cell = (Vector2Int)tempCellPosition;
+
+        if (GetObjectAtCell(cell) == null && IsCellFree((Vector2Int)tempCellPosition))
         {
-            cell = (Vector2Int)tempCellPosition;
             return true;
         }
         return false;
@@ -92,12 +92,10 @@ public class HexagonalMap : MonoBehaviour
         if (_gridObjects.ContainsKey(cell))
         {
             var gridObject = _gridObjects[cell];
-            Debug.Log($"We have object {gridObject.GetType()} at cell {cell}");
             return _gridObjects[cell];
         }
         else
         {
-            Debug.Log($"No object at cell {cell}");
             return null;
         }
     }
@@ -133,7 +131,7 @@ public class HexagonalMap : MonoBehaviour
     public bool TryToRemoveObjectFromCell(Vector2Int cell)
     {
         var obj = GetObjectAtCell(cell);
-        if (obj != null && obj.IsRemovable)
+        if (obj != null)
         {
             obj.OnRemoved();
             _gridObjects.Remove(cell);

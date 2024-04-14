@@ -6,7 +6,7 @@ public class MainInstaller : MonoInstaller
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private HexagonalMap _hexMap;
     [SerializeField] private GridObjectPool _gridObjectPool;
-    [SerializeField] private UIManager _uiManager;
+    [SerializeField] private MainGameManager _uiManager;
 
     [Header("Scriptable objects")]
     [SerializeField] private GridPrefabContainer _gridPrefabContainer;
