@@ -5,6 +5,7 @@ using Zenject;
 public class Stone : MonoBehaviour
 {
     [Inject] GridObjectPool _pool;
+    [Inject] SoundManager _sounds;
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private StoneType _type;
     public StoneType StoneType => _type;
@@ -18,6 +19,7 @@ public class Stone : MonoBehaviour
     public void OnPlaced()
     {
         gameObject.SetActive(true);
+        _sounds.PlaySound("stone");
         IsPlaced = true;
         EventsBus.Publish(new OnPlaceStone { StoneType = _type });
         transform.localScale = Vector3.one;

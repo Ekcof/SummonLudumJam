@@ -18,6 +18,7 @@ public class AnimalView : MonoBehaviour
 
     public void ShowView(SpriteWrapper head, SpriteWrapper body)
     {
+        Debug.Log($"Show view {head.SpriteId} {body.SpriteId}");
         _headRenderer.sprite = head.Sprite;
         _bodyRenderer.sprite = body.Sprite;
         _fxManager.SetActive("SpinPortal", true);

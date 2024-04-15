@@ -20,12 +20,13 @@ public class CombinationManager : MonoBehaviour
     }
     private void OnStartSummon(OnStartSummon data)
     {
+        Debug.Log("OnStartSummon Try to calculate");
         var combination = CalculateCombination();
 
         var result = _results.FindMatchingCombination(combination);
 
         var spriteKeys = _checker.CheckAnimals(result.EnLocalization);
-
+        Debug.Log($"OnStartSummon Try to calculate {result.EnLocalization}");
 
         var headKey = spriteKeys[0];
         var bodyKey = spriteKeys.Count > 1 ? spriteKeys[1] : headKey;

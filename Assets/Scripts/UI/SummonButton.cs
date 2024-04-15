@@ -36,7 +36,7 @@ public class SummonButton : MonoBehaviour
 
     private void StartSummon()
     {
-        _soundManager.PlaySound(0);
+        _soundManager.PlaySound("summon");
         EventsBus.Publish(new OnStartSummon());
         OnChangeStoneCount(default);
         ChangeButton();

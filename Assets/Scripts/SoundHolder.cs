@@ -10,7 +10,7 @@ public class SoundHolder : ScriptableObject
 {
     [SerializeField] private SoundWrapper[] _sounds;
 
-    public SoundWrapper GetSpriteWrapperById(string id)
+    public SoundWrapper GetSoundById(string id)
     {
         return _sounds.FirstOrDefault(x => x.SoundId == id);
     }
