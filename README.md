@@ -12,5 +12,3 @@
 
 _Even in the cleanest house, shit happens... twice._
 
-**Engage with Players:**
-After playing, share in the comments how many coins you were able to accumulate and what creatures you have summoned. And discuss strategies with other players! :speech_balloon:
