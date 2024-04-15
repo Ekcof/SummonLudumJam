@@ -25,7 +25,11 @@ public class OnFinishSummon
 {
 }
 
-public class OnAddMoney
+public class OnChangeMoney
 {
     public int Money;
+}
+
+public class OnGetRepeatedCombination
+{
 }

@@ -99,7 +99,8 @@ MonoBehaviour:
   - {fileID: 7403101036973738506}
   - {fileID: 8100642311128627141}
   - {fileID: 948899380139180552}
-  animalText: {fileID: 4898738803572829648}
+  _animalText: {fileID: 4898738803572829648}
+  _moneyText: {fileID: 0}
 --- !u!1 &3374237352203537228
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2107989578985854140
 RectTransform:
   m_ObjectHideFlags: 0

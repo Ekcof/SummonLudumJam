@@ -26,8 +26,6 @@ public class InputManager : MonoBehaviour
 
             if (_map.TryGetFreeCell(worldPosition, out var cell))
             {
-                //Debug.Log($"FFF is null {_pool.Get(_mainManager.CurrentStoneType)}");
-                // Try to place a stone if it's type has been selected
                 if (_mainManager.CurrentStoneType == StoneType.None || 
                     !_map.TryToPlaceGridObjectAtCell(() => _pool.Get(_mainManager.CurrentStoneType), cell))
                     EventsBus.Publish(new OnSelectButton { StoneType = StoneType.None });

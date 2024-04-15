@@ -11,6 +11,7 @@ public class MainInstaller : MonoInstaller
     [SerializeField] private SoundManager _soundManager;
     [SerializeField] private AnimalView _animalView;
     [SerializeField] private FXManager _fXManager;
+    [SerializeField] private UIPanel _uipanel;
 
     [SerializeField] private Bar _bar;
 
@@ -26,6 +27,7 @@ public class MainInstaller : MonoInstaller
         Bind(_animalView);
         Bind(_bar);
         Bind(_fXManager);
+        Bind(_uipanel);
     }
 
     private protected void Bind<T>(T instance)

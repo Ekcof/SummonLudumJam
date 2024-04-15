@@ -39,7 +39,7 @@ public class AnimalView : MonoBehaviour
         transform.localScale = Vector3.zero;
         gameObject.SetActive(true);
         transform.DOScale(Vector3.one, 0.6f).SetDelay(1.1f).OnComplete(() => _fxManager.SetActive("SpinPortal", false));
-        _head.DORotate(Vector3.forward * 1.4f, 2f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
+        _head.DORotate(Vector3.forward * 1.8f, 2f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
     }
 
     private void OnDestroy()

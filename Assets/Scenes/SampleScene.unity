@@ -448,6 +448,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77898c47e06d9e64390df56126577767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1188726243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5479845090993332299, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+  m_PrefabInstance: {fileID: 5205372109619206425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8002575b00ba8841a00cae22a22ffcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1199056380
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +845,7 @@ MonoBehaviour:
   _soundManager: {fileID: 936515162}
   _animalView: {fileID: 1307226421}
   _fXManager: {fileID: 15325495}
+  _uipanel: {fileID: 1188726243}
   _bar: {fileID: 751143430}
 --- !u!4 &1733763879
 Transform:
@@ -879,7 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56a6b1e8140d9b408663c83307532b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obtainedCombinations: 
+  _reward: 9
 --- !u!4 &1872122197
 Transform:
   m_ObjectHideFlags: 0

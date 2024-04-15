@@ -11,7 +11,7 @@ public class CombinationManager : MonoBehaviour
     [Inject] AnimalView _animal;
     private AnimalChecker _checker = new();
 
-    public int[] StartSummon()
+    public ResultObject StartSummon()
     {
         Debug.Log("OnStartSummon Try to calculate");
         var combination = CalculateCombination();
@@ -28,7 +28,7 @@ public class CombinationManager : MonoBehaviour
         var bodySprite = _bodySprites.GetSpriteWrapperById(bodyKey);
         _animal.ShowView(headSprite, bodySprite);
 
-        return combination.ToArray();
+        return result;
     }
 
     private List<int> CalculateCombination()

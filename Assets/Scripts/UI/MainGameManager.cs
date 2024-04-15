@@ -1,14 +1,16 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Zenject;
 
 public class MainGameManager : MonoBehaviour
 {
-    [Inject] HexagonalMap _map;
     [Inject] CombinationManager _combinationManager;
+    [Inject] UIPanel _panel;
 
-    [SerializeField] int[] _obtainedCombinations;
-    private int money = 0;
+    [SerializeField] readonly List<int[]> _obtainedCombinations = new();
+    [SerializeField] int _reward = 9;
+    private int _money = 0;
 
     private StoneInfo _currentStone;
     public StoneType CurrentStoneType => _currentStone != null ? _currentStone.type : StoneType.None;
@@ -38,7 +40,34 @@ public class MainGameManager : MonoBehaviour
 
     private void OnStartSummon(OnStartSummon data)
     {
-        var combination = _combinationManager.StartSummon();
+        var result = _combinationManager.StartSummon();
+
+        if (result == null)
+        {
+            Debug.LogAssertion("Failed to get result!");
+            return;
+        }
+
+        var combination = result.Combination.ToArray();
+
+        if (_obtainedCombinations.Any(x => x.SequenceEqual(combination)))
+        {
+            Debug.Log("Repeated combination");
+            EventsBus.Publish(new OnGetRepeatedCombination());
+        }
+        else if (result.Id == "monster")
+        {
+            _panel.SetAnimalText(result.EnLocalization);
+        }
+        else
+        {
+            Debug.Log("Add new combination");
+            _money += _reward;
+            _panel.OnChangeMoney(_money);
+            _panel.SetAnimalText(result.EnLocalization);
+            _obtainedCombinations.Add(combination);
+
+        }
         IsSummonState = true;
     }
 
