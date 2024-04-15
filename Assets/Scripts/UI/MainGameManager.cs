@@ -5,7 +5,11 @@ using Zenject;
 public class MainGameManager : MonoBehaviour
 {
     [Inject] HexagonalMap _map;
+    [Inject] CombinationManager _combinationManager;
+
     [SerializeField] int[] _obtainedCombinations;
+    private int money = 0;
+
     private StoneInfo _currentStone;
     public StoneType CurrentStoneType => _currentStone != null ? _currentStone.type : StoneType.None;
     public void SetStone(StoneInfo newStone) => _currentStone = newStone;
@@ -34,27 +38,12 @@ public class MainGameManager : MonoBehaviour
 
     private void OnStartSummon(OnStartSummon data)
     {
-        var combination = CalculateCombination();
+        var combination = _combinationManager.StartSummon();
         IsSummonState = true;
     }
 
     private void OnFinishSummon(OnFinishSummon data)
     {
         IsSummonState = false;
-    }
-
-    private List<int> CalculateCombination()
-    {
-        List<int> combination = new();
-        foreach (var kvp in _map.GridObjects)
-        {
-            combination.Add((int)kvp.Value.StoneType);
-        }
-        combination.Sort();
-
-        string combinationString = string.Join(",", combination);
-
-        Debug.Log($" The combination is {combinationString}");
-        return combination;
     }
 }

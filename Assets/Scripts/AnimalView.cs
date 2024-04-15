@@ -25,8 +25,6 @@ public class AnimalView : MonoBehaviour
         Animate();
     }
 
-
-
     private void OnFinishSummon(OnFinishSummon data)
     {
         _fxManager.SetActive("SpinPortal", false);

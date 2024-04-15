@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 
@@ -13,12 +11,7 @@ public class CombinationManager : MonoBehaviour
     [Inject] AnimalView _animal;
     private AnimalChecker _checker = new();
 
-
-    private void Awake()
-    {
-        EventsBus.Subscribe<OnStartSummon>(this, OnStartSummon);
-    }
-    private void OnStartSummon(OnStartSummon data)
+    public int[] StartSummon()
     {
         Debug.Log("OnStartSummon Try to calculate");
         var combination = CalculateCombination();
@@ -34,6 +27,8 @@ public class CombinationManager : MonoBehaviour
         var headSprite = _headSprites.GetSpriteWrapperById(headKey);
         var bodySprite = _bodySprites.GetSpriteWrapperById(bodyKey);
         _animal.ShowView(headSprite, bodySprite);
+
+        return combination.ToArray();
     }
 
     private List<int> CalculateCombination()
