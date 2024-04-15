@@ -18,8 +18,8 @@ We used following plugins:
 Also we used effects asset:
 [Epic Toon FX](https://assetstore.unity.com/packages/vfx/particles/epic-toon-fx-57772)
 
-Authors:
-[Gamedesigner Denis](https://github.com/Dapole/Spectrum-Cipher) - game design, UI design
-[Programmer Algis] (https://github.com/Ekcof/) - Main game mechanics
-[Programmer Alexei] (https://github.com/TheNitroZyniak) - Sound and UI logic
-Artist Elvira - creatures, background
+Authors:  
+[Gamedesigner Denis](https://github.com/Dapole/Spectrum-Cipher) - game design, UI design  
+[Programmer Algis](https://github.com/Ekcof/) - Main game mechanics  
+[Programmer Alexei](https://github.com/TheNitroZyniak) - Sound and UI logic  
+[Artist Elvira](https://ldjam.com/users/eravil) - creatures, background  
