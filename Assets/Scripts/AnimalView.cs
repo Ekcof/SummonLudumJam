@@ -8,16 +8,15 @@ public class AnimalView : MonoBehaviour
     [SerializeField] private SpriteRenderer _headRenderer;
     [SerializeField] private SpriteRenderer _bodyRenderer;
     private Transform _head => _headRenderer.transform;
-
     private void Awake()
     {
         EventsBus.Subscribe<OnFinishSummon>(this, OnFinishSummon);
     }
 
-    public void SetView(SpriteWrapper spriteWrapper)
+    public void SetView(SpriteWrapper head, SpriteWrapper body)
     {
-        _headRenderer.sprite = spriteWrapper.SpriteHead;
-        _bodyRenderer.sprite = spriteWrapper.SpriteBody;
+        _headRenderer.sprite = head.Sprite;
+        _bodyRenderer.sprite = body.Sprite;
         gameObject.SetActive(true);
         Animate();
     }

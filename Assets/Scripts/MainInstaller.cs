@@ -13,10 +13,6 @@ public class MainInstaller : MonoInstaller
 
     [SerializeField] private Bar _bar;
 
-    [Header("Scriptable objects")]
-    [SerializeField] private GridPrefabContainer _gridPrefabContainer;
-    [SerializeField] private ResultHandler _resultHandler;
-    [SerializeField] private SpriteHolder _spriteHolder;
 
     public override void InstallBindings()
     {
@@ -27,12 +23,7 @@ public class MainInstaller : MonoInstaller
         Bind(_combinationManager);
         Bind(_soundManager);
         Bind(_animalView);
-
         Bind(_bar);
-
-        Bind(_gridPrefabContainer);
-        Bind(_resultHandler);
-        Bind(_spriteHolder);
     }
 
     private protected void Bind<T>(T instance)

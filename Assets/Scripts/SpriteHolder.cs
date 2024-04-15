@@ -18,6 +18,5 @@ public class SpriteHolder : ScriptableObject
 public class SpriteWrapper
 {
     public string SpriteId;
-    public Sprite SpriteHead;
-    public Sprite SpriteBody;
+    public Sprite Sprite;
 }

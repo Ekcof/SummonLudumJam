@@ -18,7 +18,7 @@ public class HexagonalMap : MonoBehaviour
     private void Awake()
     {
         _freeTiles = GetTexturedCells(_floorTilemap, _obstacleTiles);
-
+        EventsBus.Subscribe<OnFinishSummon>(this, OnFinishSummon);
         Debug.Log($"There are {_freeTiles.Count} tiles");
     }
 
@@ -119,8 +119,8 @@ public class HexagonalMap : MonoBehaviour
             {
                 Vector2Int cell2Int = new (cell.x, cell.y);
                 Vector2 pos = GetWorldCoordinatesOfCell(cell2Int);
-                obj.MoveToWorldPosition(pos);
                 _gridObjects.Add(cell, obj);
+                obj.MoveToWorldPosition(pos);
                 return true;
             }
         }
@@ -140,10 +140,14 @@ public class HexagonalMap : MonoBehaviour
         return false;
     }
 
-    public HexagonalMap MoveTransformToCell(Stone mover, Vector3Int cellPosition)
+    private void OnFinishSummon(OnFinishSummon data)
     {
-        var pos = _grid.GetCellCenterWorld(cellPosition);
-        mover.MoveToWorldPosition(pos);
-        return this;
+        Debug.Log($"GridObjects count is {_gridObjects.Count}");
+        //var tempDictionary = new Dictionary<Vector2Int, Stone>(_gridObjects);
+        foreach (var obj in _gridObjects)
+        {
+            obj.Value.OnRemoved();
+        }
+        _gridObjects.Clear();
     }
 }

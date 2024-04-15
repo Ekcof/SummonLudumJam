@@ -20,15 +20,21 @@ public class Stone : MonoBehaviour
         gameObject.SetActive(true);
         IsPlaced = true;
         EventsBus.Publish(new OnPlaceStone { StoneType = _type });
+        transform.localScale = Vector3.one;
     }
 
     public void OnRemoved()
     {
         DOTween.Kill(transform);
-        transform.DOPunchScale(Vector3.one * 1.2f, 0.3f).SetLoops(2).OnComplete(() => _pool.Pool(this));
-        gameObject.SetActive(false);
-        IsPlaced = false;
+        transform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.InSine).OnComplete(Hide);
         EventsBus.Publish(new OnRemoveStone { StoneType = _type });
+    }
+
+    public void Hide()
+    {
+        IsPlaced = false;
+        gameObject.SetActive(false);
+        _pool.Pool(this);
     }
 
     public void MoveToWorldPosition(Vector3 position)

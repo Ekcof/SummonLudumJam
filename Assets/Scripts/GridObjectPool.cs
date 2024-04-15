@@ -13,6 +13,19 @@ public class GridObjectPool : MonoBehaviour
     private readonly Dictionary<Stone, StoneType> _activeObjects = new();
     private readonly Dictionary<Stone, StoneType> _hiddenObjects = new();
 
+    private void Awake()
+    {
+        EventsBus.Subscribe<OnFinishSummon>(this, OnFinishSummon);
+    }
+
+    private void OnFinishSummon(OnFinishSummon data)
+    {
+        foreach (var kvp in _activeObjects)
+        {
+            Pool(kvp.Key);
+        }   
+    }
+
     public void Pool(Stone arg)
     {
         _activeObjects.Remove(arg);
@@ -25,9 +38,6 @@ public class GridObjectPool : MonoBehaviour
 
     public Stone Get(StoneType type)
     {
-
-        
-
         if (!_hiddenObjects.ContainsValue(type))
         {
             var obj = InstantiatePrefab(type);
@@ -44,8 +54,6 @@ public class GridObjectPool : MonoBehaviour
             _hiddenObjects.Remove(obj);
             return obj;
         }
-
-
     }
 
     public Stone GetByStoneType(StoneType type)

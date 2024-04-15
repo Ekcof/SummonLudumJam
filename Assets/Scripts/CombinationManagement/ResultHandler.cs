@@ -19,8 +19,6 @@ public class ResultHandler : ScriptableObject
 
             string combinationString = string.Join(",", checkingComb);
 
-            Debug.Log($" The combination is {combinationString}");
-
             if (checkingComb.SequenceEqual(combination))
             {
                 return resultObject;

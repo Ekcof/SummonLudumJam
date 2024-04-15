@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463f18c3f56a63a4496965def86f04bb, type: 3}
+  m_Name: SoundHolder
+  m_EditorClassIdentifier: 
+  _sounds:
+  - SoundId: summon
+    AudioClip: {fileID: 8300000, guid: 619688f6598081540a637d0c22d62bfc, type: 3}

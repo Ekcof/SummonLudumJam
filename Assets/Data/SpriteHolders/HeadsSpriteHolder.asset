@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4c5e4ebb12ba34fab64229b5a9af3a, type: 3}
+  m_Name: HeadsSpriteHolder
+  m_EditorClassIdentifier: 
+  _sprites:
+  - SpriteId: crocodile
+    Sprite: {fileID: -927235004, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: hare
+    Sprite: {fileID: 579190572, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: bear
+    Sprite: {fileID: -1564921592, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: cat
+    Sprite: {fileID: 1805805479, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: elephant
+    Sprite: {fileID: 2025864234, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: fox
+    Sprite: {fileID: -410631507, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: toad
+    Sprite: {fileID: -23379384, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: shark
+    Sprite: {fileID: -2038973019, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: panda
+    Sprite: {fileID: 255868506, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: swan
+    Sprite: {fileID: -540642506, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+  - SpriteId: monster
+    Sprite: {fileID: 1601793255, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}

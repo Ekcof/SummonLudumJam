@@ -88,8 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b571aa6e11ce14991b9ddf83bb762b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barImage: {fileID: 1496432399167012607}
-  barImages:
+  _barImage: {fileID: 1496432399167012607}
+  _barImages:
   - {fileID: 21300000, guid: c9223e1f990201849841472e2f42c4fe, type: 3}
   - {fileID: 21300000, guid: 2a90df72515e9d449ab6c1df6c24d669, type: 3}
   - {fileID: 21300000, guid: 7f805d5ec874d1f428db00cdfa97521b, type: 3}

@@ -8,8 +8,11 @@ public class CombinationManager : MonoBehaviour
 {
     [Inject] HexagonalMap _map;
     [Inject] ResultHandler _results;
-    [Inject] SpriteHolder _sprites;
+    [Inject(Id ="heads")] SpriteHolder _headSprites;
+    [Inject(Id = "bodies")] SpriteHolder _bodySprites;
     [Inject] AnimalView _animal;
+    private AnimalChecker _checker = new();
+
 
     private void Awake()
     {
@@ -20,8 +23,16 @@ public class CombinationManager : MonoBehaviour
         var combination = CalculateCombination();
 
         var result = _results.FindMatchingCombination(combination);
-        var sprites = _sprites.GetSpriteWrapperById(result.Id);
-        _animal.SetView(sprites);
+
+        var spriteKeys = _checker.CheckAnimals(result.EnLocalization);
+
+
+        var headKey = spriteKeys[0];
+        var bodyKey = spriteKeys.Count > 1 ? spriteKeys[1] : headKey;
+
+        var headSprite = _headSprites.GetSpriteWrapperById(headKey);
+        var bodySprite = _bodySprites.GetSpriteWrapperById(bodyKey);
+        _animal.SetView(headSprite, bodySprite);
     }
 
     private List<int> CalculateCombination()

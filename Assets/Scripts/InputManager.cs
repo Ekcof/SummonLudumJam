@@ -10,19 +10,15 @@ public class InputManager : MonoBehaviour
 {
     [Inject] private GridObjectPool _pool;
     [Inject] private HexagonalMap _map;
-    [Inject] private MainGameManager _uiManager;
+    [Inject] private MainGameManager _mainManager;
+
     [Inject(Id = "mainCamera")] private Camera _camera;
     [SerializeField] private float _doubleClickThreshold = 0.2f;
     private float _lastClickTime = 0f;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !_mainManager.IsSummonState)
         {
 
             Vector3 worldPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
@@ -30,9 +26,10 @@ public class InputManager : MonoBehaviour
 
             if (_map.TryGetFreeCell(worldPosition, out var cell))
             {
+                //Debug.Log($"FFF is null {_pool.Get(_mainManager.CurrentStoneType)}");
                 // Try to place a stone if it's type has been selected
-                if (_uiManager.CurrentStoneType == StoneType.None || 
-                    !_map.TryToPlaceGridObjectAtCell(() => _pool.Get(_uiManager.CurrentStoneType), cell))
+                if (_mainManager.CurrentStoneType == StoneType.None || 
+                    !_map.TryToPlaceGridObjectAtCell(() => _pool.Get(_mainManager.CurrentStoneType), cell))
                     EventsBus.Publish(new OnSelectButton { StoneType = StoneType.None });
             }
             else

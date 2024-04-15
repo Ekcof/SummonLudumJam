@@ -16,41 +16,281 @@ MonoBehaviour:
   - Id: stat_1
     RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u0434\u044C"
     EnLocalization: Bear
-    Combination: 010000000200000006000000
+    Combination: 0100000002000000030000000400000005000000
   - Id: stat_2
     RuLocalization: "\u041B\u0435\u0431\u0435\u0434\u044C"
     EnLocalization: Swan
-    Combination: 030000000400000002000000
+    Combination: 0100000002000000030000000400000006000000
   - Id: stat_3
     RuLocalization: "\u041A\u043E\u0442"
     EnLocalization: Cat
-    Combination: 040000000100000007000000
+    Combination: 0100000002000000030000000400000007000000
   - Id: stat_4
+    RuLocalization: "\u0421\u043B\u043E\u043D"
+    EnLocalization: Elephant
+    Combination: 0100000002000000030000000500000006000000
+  - Id: stat_5
+    RuLocalization: "\u041B\u0438\u0441\u0430"
+    EnLocalization: Fox
+    Combination: 0100000002000000030000000500000007000000
+  - Id: stat_6
+    RuLocalization: "\u041A\u0440\u043E\u043A\u043E\u0434\u0438\u043B"
+    EnLocalization: Crocodile
+    Combination: 0100000002000000030000000600000007000000
+  - Id: stat_7
+    RuLocalization: "\u0420\u044B\u0431\u0430"
+    EnLocalization: Fish
+    Combination: 0100000002000000040000000500000006000000
+  - Id: stat_8
+    RuLocalization: "\u0417\u0430\u044F\u0446"
+    EnLocalization: Hare
+    Combination: 0100000002000000040000000500000007000000
+  - Id: stat_9
+    RuLocalization: "\u0416\u0430\u0431\u0430"
+    EnLocalization: Toad
+    Combination: 0100000002000000040000000600000007000000
+  - Id: stat_10
+    RuLocalization: "\u041F\u0430\u043D\u0434\u0430"
+    EnLocalization: Panda
+    Combination: 0100000002000000050000000600000007000000
+  - Id: stat_11
+    RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u043B\u0435\u0431\u0435\u0434\u044C"
+    EnLocalization: Bearswan
+    Combination: 01000000020000000300000004000000
+  - Id: stat_12
     RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u043A\u043E\u0442"
     EnLocalization: Bearcat
-    Combination: 01000000020000000700000006000000
-  - Id: stat_5
-    RuLocalization: "\u041A\u043E\u0442\u043E\u043C\u0435\u0434\u0432\u0435\u0434\u044C"
-    EnLocalization: Catbear
-    Combination: 03000000010000000600000005000000
-  - Id: stat_6
-    RuLocalization: "\u041A\u043E\u0442\u043E\u043B\u0435\u0431\u0435\u0434\u044C"
-    EnLocalization: Catswan
-    Combination: 01000000060000000300000005000000
-  - Id: stat_7
+    Combination: 01000000020000000300000005000000
+  - Id: stat_13
+    RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u0441\u043B\u043E\u043D"
+    EnLocalization: Bearelephant
+    Combination: 01000000020000000300000006000000
+  - Id: stat_14
+    RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u043B\u0438\u0441"
+    EnLocalization: Bearfox
+    Combination: 01000000020000000300000007000000
+  - Id: stat_15
+    RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u043A\u0440\u043E\u043A"
+    EnLocalization: Bearcrocodile
+    Combination: 01000000020000000400000005000000
+  - Id: stat_16
+    RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u0440\u044B\u0431"
+    EnLocalization: Bearfish
+    Combination: 01000000020000000400000006000000
+  - Id: stat_17
+    RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u0437\u0430\u0439"
+    EnLocalization: Bearhare
+    Combination: 01000000020000000400000007000000
+  - Id: stat_18
+    RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u0436\u0430\u0431"
+    EnLocalization: Beartoad
+    Combination: 01000000020000000500000006000000
+  - Id: stat_19
+    RuLocalization: "\u041C\u0435\u0434\u0432\u0435\u043F\u0430\u043D"
+    EnLocalization: Bearpanda
+    Combination: 01000000020000000500000007000000
+  - Id: stat_20
     RuLocalization: "\u041B\u0435\u0431\u0435\u043A\u043E\u0442"
     EnLocalization: Swancat
-    Combination: 01000000020000000300000007000000
-  - Id: stat_8
-    RuLocalization: "\u041B\u0435\u0431\u0435\u043C\u0435\u0434"
-    EnLocalization: Swanbear
-    Combination: 01000000060000000200000004000000
-  - Id: stat_9
-    RuLocalization: "\u0427\u0443\u0434\u043E\u0432\u0438\u0449\u0435"
-    EnLocalization: Monster
-    Combination: 01000000020000000500000007000000
+    Combination: 01000000020000000600000007000000
+  - Id: stat_21
+    RuLocalization: "\u041B\u0435\u0431\u0435\u0441\u043B\u043E\u043D"
+    EnLocalization: Swanelephant
+    Combination: 01000000030000000400000005000000
+  - Id: stat_22
+    RuLocalization: "\u041B\u0435\u0431\u0435\u043B\u0438\u0441"
+    EnLocalization: Swanfox
+    Combination: 01000000030000000400000006000000
+  - Id: stat_23
+    RuLocalization: "\u041B\u0435\u0431\u0435\u043A\u0440\u043E\u043A"
+    EnLocalization: Swancrocodile
+    Combination: 01000000030000000400000007000000
+  - Id: stat_24
+    RuLocalization: "\u041B\u0435\u0431\u0435\u0440\u044B\u0431"
+    EnLocalization: Swanfish
+    Combination: 01000000030000000500000006000000
+  - Id: stat_25
+    RuLocalization: "\u041B\u0435\u0431\u0435\u0437\u0430\u0439"
+    EnLocalization: Swanhare
+    Combination: 01000000030000000500000007000000
+  - Id: stat_26
+    RuLocalization: "\u041B\u0435\u0431\u0435\u0436\u0430\u0431"
+    EnLocalization: Swantoad
+    Combination: 01000000030000000600000007000000
+  - Id: stat_27
+    RuLocalization: "\u041A\u043E\u0442\u043E\u043F\u0430\u043D"
+    EnLocalization: Catpanda
+    Combination: 01000000040000000500000006000000
+  - Id: stat_28
+    RuLocalization: "\u041A\u0440\u043E\u043A\u043E\u043F\u0430\u043D"
+    EnLocalization: Crocodilepanda
+    Combination: 01000000040000000500000007000000
+  - Id: stat_29
+    RuLocalization: "\u0417\u0430\u0439\u0446\u0435\u043F\u0430\u043D"
+    EnLocalization: Harepanda
+    Combination: 01000000040000000600000007000000
+  - Id: stat_30
+    RuLocalization: "\u0421\u043B\u043E\u043D\u043B\u0435\u0431\u0435\u0434\u044C"
+    EnLocalization: Elephantswan
+    Combination: 01000000050000000600000007000000
+  - Id: stat_31
+    RuLocalization: "\u0421\u043B\u043E\u043D\u043A\u043E\u0442"
+    EnLocalization: Elephantcat
+    Combination: 02000000030000000400000005000000
+  - Id: stat_32
+    RuLocalization: "\u0421\u043B\u043E\u043D\u043B\u0438\u0441"
+    EnLocalization: Elephantfox
+    Combination: 02000000030000000400000006000000
+  - Id: stat_33
+    RuLocalization: "\u0421\u043B\u043E\u043D\u043A\u0440\u043E\u043A"
+    EnLocalization: Elephantcrocodile
+    Combination: 02000000030000000400000007000000
+  - Id: stat_34
+    RuLocalization: "\u0421\u043B\u043E\u043D\u0440\u044B\u0431"
+    EnLocalization: Elephantfish
+    Combination: 02000000030000000500000006000000
+  - Id: stat_35
+    RuLocalization: "\u0421\u043B\u043E\u043D\u0436\u0430\u0431"
+    EnLocalization: Elephanttoad
+    Combination: 02000000030000000500000007000000
+  - Id: stat_36
+    RuLocalization: "\u0421\u043B\u043E\u043D\u0437\u0430\u0439"
+    EnLocalization: Elephanthare
+    Combination: 02000000030000000600000007000000
+  - Id: stat_37
+    RuLocalization: "\u0421\u043B\u043E\u043D\u043F\u0430\u043D"
+    EnLocalization: Elephantpanda
+    Combination: 02000000040000000500000006000000
+  - Id: stat_38
+    RuLocalization: "\u041B\u0438\u0441\u043B\u0435\u0431\u0435\u0434\u044C"
+    EnLocalization: Foxswan
+    Combination: 02000000040000000500000007000000
+  - Id: stat_39
+    RuLocalization: "\u041B\u0438\u0441\u043A\u043E\u0442"
+    EnLocalization: Foxcat
+    Combination: 02000000040000000600000007000000
+  - Id: stat_40
+    RuLocalization: "\u041B\u0438\u0441\u0441\u043B\u043E\u043D"
+    EnLocalization: Foxelephant
+    Combination: 02000000050000000600000007000000
+  - Id: stat_41
+    RuLocalization: "\u041B\u0438\u0441\u043A\u0440\u043E\u043A"
+    EnLocalization: Foxcrocodile
+    Combination: 03000000040000000500000006000000
+  - Id: stat_42
+    RuLocalization: "\u041B\u0438\u0441\u0440\u044B\u0431"
+    EnLocalization: Foxfish
+    Combination: 03000000040000000500000007000000
+  - Id: stat_43
+    RuLocalization: "\u041B\u0438\u0441\u0436\u0430\u0431"
+    EnLocalization: Foxtoad
+    Combination: 03000000040000000600000007000000
+  - Id: stat_44
+    RuLocalization: "\u041B\u0438\u0441\u0437\u0430\u0439"
+    EnLocalization: Foxhare
+    Combination: 03000000050000000600000007000000
+  - Id: stat_45
+    RuLocalization: "\u041B\u0438\u0441\u043F\u0430\u043D"
+    EnLocalization: Foxpanda
+    Combination: 04000000050000000600000007000000
+  - Id: stat_46
+    RuLocalization: "\u041A\u0440\u043E\u043A\u043B\u0435\u0431\u0435\u0434\u044C"
+    EnLocalization: Crocodileswan
+    Combination: 020000000300000004000000
+  - Id: stat_47
+    RuLocalization: "\u041A\u0440\u043E\u043A\u043A\u043E\u0442"
+    EnLocalization: Crocodilecat
+    Combination: 020000000300000005000000
+  - Id: stat_48
+    RuLocalization: "\u041A\u0440\u043E\u043A\u0441\u043B\u043E\u043D"
+    EnLocalization: Crocodileelephant
+    Combination: 020000000300000006000000
+  - Id: stat_49
+    RuLocalization: "\u041A\u0440\u043E\u043A\u043B\u0438\u0441"
+    EnLocalization: Crocodilefox
+    Combination: 020000000300000007000000
+  - Id: stat_50
+    RuLocalization: "\u041A\u0440\u043E\u043A\u0440\u044B\u0431"
+    EnLocalization: Crocodilefish
+    Combination: 020000000400000005000000
+  - Id: stat_51
+    RuLocalization: "\u041A\u0440\u043E\u043A\u0436\u0430\u0431"
+    EnLocalization: Crocodiletoad
+    Combination: 020000000400000006000000
+  - Id: stat_52
+    RuLocalization: "\u041A\u0440\u043E\u043A\u0437\u0430\u0439"
+    EnLocalization: Crocodilehare
+    Combination: 020000000400000007000000
+  - Id: stat_53
+    RuLocalization: "\u041A\u0440\u043E\u043A\u043F\u0430\u043D"
+    EnLocalization: Crocodilepanda
+    Combination: 020000000500000006000000
+  - Id: stat_54
+    RuLocalization: "\u0420\u044B\u0431\u0430\u043B\u0435\u0431\u0435\u0434\u044C"
+    EnLocalization: Fishswan
+    Combination: 020000000500000007000000
+  - Id: stat_55
+    RuLocalization: "\u0420\u044B\u0431\u0430\u043A\u043E\u0442"
+    EnLocalization: Fishcat
+    Combination: 020000000600000007000000
+  - Id: stat_56
+    RuLocalization: "\u0420\u044B\u0431\u0430\u0441\u043B\u043E\u043D"
+    EnLocalization: Fishelephant
+    Combination: 030000000400000005000000
+  - Id: stat_57
+    RuLocalization: "\u0420\u044B\u0431\u0430\u043B\u0438\u0441"
+    EnLocalization: Fishfox
+    Combination: 030000000400000006000000
+  - Id: stat_58
+    RuLocalization: "\u0420\u044B\u0431\u0430\u043A\u0440\u043E\u043A"
+    EnLocalization: Fishcrocodile
+    Combination: 030000000400000007000000
+  - Id: stat_59
+    RuLocalization: "\u0420\u044B\u0431\u0430\u0436\u0430\u0431"
+    EnLocalization: Fishtoad
+    Combination: 030000000500000006000000
+  - Id: stat_60
+    RuLocalization: "\u0420\u044B\u0431\u0430\u0437\u0430\u0439"
+    EnLocalization: Fishhare
+    Combination: 030000000500000007000000
+  - Id: stat_61
+    RuLocalization: "\u0420\u044B\u0431\u0430\u043F\u0430\u043D"
+    EnLocalization: Fishpanda
+    Combination: 030000000600000007000000
+  - Id: stat_62
+    RuLocalization: "\u0416\u0430\u0431\u0430\u043B\u0435\u0431\u0435\u0434\u044C"
+    EnLocalization: Toadswan
+    Combination: 0200000003000000040000000500000006000000
+  - Id: stat_63
+    RuLocalization: "\u0416\u0430\u0431\u0430\u043A\u043E\u0442"
+    EnLocalization: Toadcat
+    Combination: 0200000003000000040000000500000007000000
+  - Id: stat_64
+    RuLocalization: "\u0416\u0430\u0431\u0430\u0441\u043B\u043E\u043D"
+    EnLocalization: Toadelephant
+    Combination: 0200000003000000040000000600000007000000
+  - Id: stat_65
+    RuLocalization: "\u0416\u0430\u0431\u0430\u043B\u0438\u0441"
+    EnLocalization: Toadfox
+    Combination: 0200000003000000050000000600000007000000
+  - Id: stat_66
+    RuLocalization: "\u0416\u0430\u0431\u0430\u043A\u0440\u043E\u043A"
+    EnLocalization: Toadcrocodile
+    Combination: 0200000004000000050000000600000007000000
+  - Id: stat_67
+    RuLocalization: "\u0416\u0430\u0431\u0430\u0440\u044B\u0431"
+    EnLocalization: Toadfish
+    Combination: 0300000004000000050000000600000007000000
+  - Id: stat_68
+    RuLocalization: "\u0416\u0430\u0431\u0430\u0437\u0430\u0439"
+    EnLocalization: Toadhare
+    Combination: 0100000003000000040000000500000006000000
+  - Id: stat_69
+    RuLocalization: "\u0416\u0430\u0431\u0430\u043F\u0430\u043D"
+    EnLocalization: Toadpanda
+    Combination: 0100000003000000040000000500000007000000
   _fallBackResult:
     Id: monster
     RuLocalization: "\u0413\u043D\u0432\u043E\u0435\u0440\u043A"
-    EnLocalization: Monster
+    EnLocalization: monster
     Combination: 
