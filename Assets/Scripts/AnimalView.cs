@@ -52,7 +52,7 @@ public class AnimalView : MonoBehaviour
         _fxManager.SetActive(_currentPortalKey, false);
         _fxManager.SetActive("MagicFog", true);
         if (_isMonster)
-            transform.DOPunchScale(Vector3.one * 0.15f, 3f, 2).SetLoops(-1, LoopType.Incremental).SetEase(Ease.InOutQuad);
+            transform.DOScale(Vector3.one * 0.85f, 3f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
         _head.DORotate(Vector3.forward * 1.8f, 2f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
         EventsBus.Publish(new OnAnimalAppear());
     }

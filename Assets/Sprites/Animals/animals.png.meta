@@ -538,12 +538,12 @@ TextureImporter:
       name: swanHead
       rect:
         serializedVersion: 2
-        x: 1252
+        x: 1257
         y: 362
         width: 293
         height: 371
       alignment: 9
-      pivot: {x: 0.635863, y: -0.00000032903048}
+      pivot: {x: 0.54911184, y: -0.0000004112881}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
