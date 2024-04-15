@@ -15,3 +15,5 @@ MonoBehaviour:
   _sounds:
   - SoundId: summon
     AudioClip: {fileID: 8300000, guid: 619688f6598081540a637d0c22d62bfc, type: 3}
+  - SoundId: stone
+    AudioClip: {fileID: 8300000, guid: 33cca41bd9bf6df4b878f99c12a69ef2, type: 3}

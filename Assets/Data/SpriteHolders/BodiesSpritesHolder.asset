@@ -25,12 +25,12 @@ MonoBehaviour:
     Sprite: {fileID: -1353621341, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
   - SpriteId: toad
     Sprite: {fileID: -1023388908, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
-  - SpriteId: shark
+  - SpriteId: fish
     Sprite: {fileID: -1705604433, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
   - SpriteId: panda
     Sprite: {fileID: -1393129909, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
   - SpriteId: monster
-    Sprite: {fileID: -1453584727, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
+    Sprite: {fileID: 0}
   - SpriteId: cat
     Sprite: {fileID: 198872232, guid: b74d70e3e544cf445a9a1ccaa4d55cc2, type: 3}
   - SpriteId: swan
