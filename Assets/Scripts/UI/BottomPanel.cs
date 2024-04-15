@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using Zenject;
 
@@ -9,6 +10,7 @@ public class BottomPanel : MonoBehaviour
 
     [SerializeField] private SummonButton _button;
     [SerializeField] private StoneButton[] _buttons;
+    [SerializeField] private TextMeshProUGUI animalText;
 
 
     void Awake()
@@ -41,5 +43,9 @@ public class BottomPanel : MonoBehaviour
         StoneInfo stone = new StoneInfo(type);
         
         _uiManager.SetStone(stone);
+    }
+
+    public void SetAnimalText(string animalName) {
+        animalText.name = animalName;
     }
 }
