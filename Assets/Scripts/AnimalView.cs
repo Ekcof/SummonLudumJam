@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.VFX;
+using Zenject;
 
 public class AnimalView : MonoBehaviour
 {
+    [Inject] FXManager _fxManager;
     [SerializeField] private SpriteRenderer _headRenderer;
     [SerializeField] private SpriteRenderer _bodyRenderer;
     private Transform _head => _headRenderer.transform;
@@ -13,23 +16,36 @@ public class AnimalView : MonoBehaviour
         EventsBus.Subscribe<OnFinishSummon>(this, OnFinishSummon);
     }
 
-    public void SetView(SpriteWrapper head, SpriteWrapper body)
+    public void ShowView(SpriteWrapper head, SpriteWrapper body)
     {
         _headRenderer.sprite = head.Sprite;
         _bodyRenderer.sprite = body.Sprite;
-        gameObject.SetActive(true);
+        _fxManager.SetActive("SpinPortal", true);
         Animate();
     }
 
+
+
     private void OnFinishSummon(OnFinishSummon data)
     {
+        _fxManager.SetActive("SpinPortal", false);
         DOTween.Kill(_head);
         gameObject.SetActive(false);
     }
 
     private void Animate()
     {
+        DOTween.Kill(transform);
         DOTween.Kill(_head);
-        _head.DORotate(Vector3.forward * 1.2f, 2f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
+        transform.localScale = Vector3.zero;
+        gameObject.SetActive(true);
+        transform.DOScale(Vector3.one, 0.6f).SetDelay(1.1f).OnComplete(() => _fxManager.SetActive("SpinPortal", false));
+        _head.DORotate(Vector3.forward * 1.4f, 2f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
+    }
+
+    private void OnDestroy()
+    {
+        DOTween.Kill(transform);
+        DOTween.Kill(_head);
     }
 }

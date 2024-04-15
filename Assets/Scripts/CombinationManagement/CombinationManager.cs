@@ -32,7 +32,7 @@ public class CombinationManager : MonoBehaviour
 
         var headSprite = _headSprites.GetSpriteWrapperById(headKey);
         var bodySprite = _bodySprites.GetSpriteWrapperById(bodyKey);
-        _animal.SetView(headSprite, bodySprite);
+        _animal.ShowView(headSprite, bodySprite);
     }
 
     private List<int> CalculateCombination()

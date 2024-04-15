@@ -10,6 +10,7 @@ public class MainInstaller : MonoInstaller
     [SerializeField] private CombinationManager _combinationManager;
     [SerializeField] private SoundManager _soundManager;
     [SerializeField] private AnimalView _animalView;
+    [SerializeField] private FXManager _fXManager;
 
     [SerializeField] private Bar _bar;
 
@@ -24,6 +25,7 @@ public class MainInstaller : MonoInstaller
         Bind(_soundManager);
         Bind(_animalView);
         Bind(_bar);
+        Bind(_fXManager);
     }
 
     private protected void Bind<T>(T instance)
