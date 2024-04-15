@@ -24,3 +24,8 @@ public class OnStartSummon
 public class OnFinishSummon
 {
 }
+
+public class OnAddMoney
+{
+    public int Money;
+}
