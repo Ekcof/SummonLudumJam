@@ -5,6 +5,7 @@ using Zenject;
 public class MainGameManager : MonoBehaviour
 {
     [Inject] HexagonalMap _map;
+    [SerializeField] int[] _obtainedCombinations;
     private StoneInfo _currentStone;
     public StoneType CurrentStoneType => _currentStone != null ? _currentStone.type : StoneType.None;
     public void SetStone(StoneInfo newStone) => _currentStone = newStone;
