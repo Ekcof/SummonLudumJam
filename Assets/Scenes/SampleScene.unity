@@ -1013,6 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56a6b1e8140d9b408663c83307532b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _obtainedCombinations: 
 --- !u!4 &1872122197
 Transform:
   m_ObjectHideFlags: 0
@@ -2042,6 +2043,22 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 396696937823438525, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 396696937823438525, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 56.5926
+      objectReference: {fileID: 0}
+    - target: {fileID: 396696937823438525, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -389.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 396696937823438525, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 112.29628
+      objectReference: {fileID: 0}
     - target: {fileID: 609560836445712903, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2393,6 +2410,14 @@ PrefabInstance:
     - target: {fileID: 6313552923682933379, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -116.95799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574020041262481361, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574020041262481361, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6970898560235770301, guid: 452fb16903982c5448a84525b19bb1e8, type: 3}
       propertyPath: m_AnchorMax.y
