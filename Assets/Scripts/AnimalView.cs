@@ -11,6 +11,9 @@ public class AnimalView : MonoBehaviour
     [SerializeField] private SpriteRenderer _headRenderer;
     [SerializeField] private SpriteRenderer _bodyRenderer;
     private Transform _head => _headRenderer.transform;
+    private string _currentPortalKey = "SpinPortal";
+    private bool _isMonster;
+
     private void Awake()
     {
         EventsBus.Subscribe<OnFinishSummon>(this, OnFinishSummon);
@@ -18,16 +21,19 @@ public class AnimalView : MonoBehaviour
 
     public void ShowView(SpriteWrapper head, SpriteWrapper body)
     {
+        _isMonster = head.SpriteId == "monster";
+        _currentPortalKey = !_isMonster ? "SpinPortal" : "MonsterPortal";
         Debug.Log($"Show view {head.SpriteId} {body.SpriteId}");
         _headRenderer.sprite = head.Sprite;
         _bodyRenderer.sprite = body.Sprite;
-        _fxManager.SetActive("SpinPortal", true);
+        _fxManager.SetActive(_currentPortalKey, true);
         Animate();
     }
 
     private void OnFinishSummon(OnFinishSummon data)
     {
-        _fxManager.SetActive("SpinPortal", false);
+        _fxManager.SetActive(_currentPortalKey, false);
+        DOTween.Kill(transform);
         DOTween.Kill(_head);
         gameObject.SetActive(false);
     }
@@ -38,8 +44,17 @@ public class AnimalView : MonoBehaviour
         DOTween.Kill(_head);
         transform.localScale = Vector3.zero;
         gameObject.SetActive(true);
-        transform.DOScale(Vector3.one, 0.6f).SetDelay(1.1f).OnComplete(() => _fxManager.SetActive("SpinPortal", false));
+        transform.DOScale(Vector3.one, 0.6f).SetDelay(1.1f).OnComplete(OnAnimalAppear);
+    }
+
+    private void OnAnimalAppear()
+    {
+        _fxManager.SetActive(_currentPortalKey, false);
+        _fxManager.SetActive("MagicFog", true);
+        if (_isMonster)
+            transform.DOPunchScale(Vector3.one * 0.15f, 3f, 2).SetLoops(-1, LoopType.Incremental).SetEase(Ease.InOutQuad);
         _head.DORotate(Vector3.forward * 1.8f, 2f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
+        EventsBus.Publish(new OnAnimalAppear());
     }
 
     private void OnDestroy()

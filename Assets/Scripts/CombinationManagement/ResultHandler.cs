@@ -17,8 +17,6 @@ public class ResultHandler : ScriptableObject
             List<int> checkingComb = new List<int>(resultObject.Combination);
             checkingComb.Sort();
 
-            string combinationString = string.Join(",", checkingComb);
-
             if (checkingComb.SequenceEqual(combination))
             {
                 return resultObject;

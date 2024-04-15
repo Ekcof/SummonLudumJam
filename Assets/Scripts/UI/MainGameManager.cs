@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.VFX;
 using Zenject;
 
 public class MainGameManager : MonoBehaviour
 {
     [Inject] CombinationManager _combinationManager;
     [Inject] UIPanel _panel;
+    [Inject] FXManager _fxManager;
 
     [SerializeField] readonly List<int[]> _obtainedCombinations = new();
     [SerializeField] int _reward = 9;
@@ -52,12 +54,11 @@ public class MainGameManager : MonoBehaviour
 
         if (_obtainedCombinations.Any(x => x.SequenceEqual(combination)))
         {
-            Debug.Log("Repeated combination");
-            EventsBus.Publish(new OnGetRepeatedCombination());
+            _panel.SetAnimalText("repeat");
         }
         else if (result.Id == "monster")
         {
-            _panel.SetAnimalText(result.EnLocalization);
+            _panel.SetAnimalText("monster");
         }
         else
         {
@@ -68,11 +69,13 @@ public class MainGameManager : MonoBehaviour
             _obtainedCombinations.Add(combination);
 
         }
+        _fxManager.SetActive("Fog", false);
         IsSummonState = true;
     }
 
     private void OnFinishSummon(OnFinishSummon data)
     {
+        _fxManager.SetActive("Fog", true);
         IsSummonState = false;
     }
 }

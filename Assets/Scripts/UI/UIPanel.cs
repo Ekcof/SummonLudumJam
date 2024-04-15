@@ -13,6 +13,8 @@ public class UIPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _animalText;
     [SerializeField] private TextMeshProUGUI _moneyText;
 
+    [SerializeField] private string[] _repeatTexts;
+    [SerializeField] private string[] _monsterTexts;
 
     void Awake()
     {
@@ -57,11 +59,17 @@ public class UIPanel : MonoBehaviour
 
     public void SetAnimalText(string animalName)
     {
+        if (animalName == "monster")
+            animalName = _monsterTexts[new System.Random().Next(_monsterTexts.Length)];
+        if (animalName == "repeat")
+            animalName = _repeatTexts[new System.Random().Next(_repeatTexts.Length)];
+
         DOTween.Kill(_animalText.transform);
         _animalText.gameObject.SetActive(true);
         _animalText.transform.localScale = Vector3.zero;
         _animalText.text = animalName;
         _animalText.transform.DOScale(Vector3.one, 0.3f).SetDelay(1f);
+
     }
 
     private void OnDestroy()

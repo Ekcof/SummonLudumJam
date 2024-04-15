@@ -21,6 +21,7 @@ public class SummonButton : MonoBehaviour
     {
         EventsBus.Subscribe<OnPlaceStone>(this, OnChangeStoneCount);
         EventsBus.Subscribe<OnRemoveStone>(this, OnChangeStoneCount);
+        EventsBus.Subscribe<OnAnimalAppear>(this, OnAnimalAppear);
         Initialize();
     }
 
@@ -29,8 +30,13 @@ public class SummonButton : MonoBehaviour
         _button.onClick.RemoveAllListeners();
         _button.onClick.AddListener(StartSummon);
 
-        _button.interactable = false;
         _image.sprite = _summonSprite;
+        DisableButton();
+    }
+
+    private void DisableButton()
+    {
+        _button.interactable = false;
         _image.color = _disabledColor;
     }
 
@@ -42,15 +48,24 @@ public class SummonButton : MonoBehaviour
         ChangeButton();
     }
 
-    private void ChangeButton() {
+    private void ChangeButton()
+    {
         _button.onClick.RemoveAllListeners();
         _button.onClick.AddListener(OnTryAgain);
         _image.sprite = _tryAgainSprite;
+        DisableButton();
     }
 
-    private void OnTryAgain() {
-        Initialize();
+    private void OnTryAgain()
+    {
         EventsBus.Publish(new OnFinishSummon());
+        Initialize();
+    }
+
+    private void OnAnimalAppear(OnAnimalAppear data)
+    {
+        _button.interactable = true;
+        _image.color = _enabledColor;
     }
 
     private void OnChangeStoneCount(object data)
