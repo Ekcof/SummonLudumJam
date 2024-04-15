@@ -23,3 +23,5 @@ Authors:
 [Programmer Algis](https://github.com/Ekcof/) - Main game mechanics  
 [Programmer Alexei](https://github.com/TheNitroZyniak) - Sound and UI logic  
 [Artist Elvira](https://ldjam.com/users/eravil) - creatures, background  
+![Screenshot]([путь/к/изображению.jpg](https://github.com/Ekcof/SummonLudumJam/blob/main/scr1.png))  
+![Screenshot]([путь/к/изображению.jpg](https://github.com/Ekcof/SummonLudumJam/blob/main/scr2.png))
