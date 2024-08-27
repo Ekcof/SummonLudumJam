@@ -15,7 +15,7 @@ _Even in the cleanest house, shit happens... twice._
 [**Play game**](https://algiskhasanov.itch.io/the-stone-summoners) 
 
 We used following plugins:  
-[Zenject](https://github.com/modesttree/Zenject)  
+[Zenject](https://github.com/modesttree/Zenject)
 [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676)  
 Also we used effects asset:  
 [Epic Toon FX](https://assetstore.unity.com/packages/vfx/particles/epic-toon-fx-57772)  
